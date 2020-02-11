@@ -27,6 +27,11 @@ public class IntArrayWorker {
 		return total;
 	}
 
+	public int getCount(){
+		int count = 0;
+		for(int)
+	}
+
 	/**
 	 * Method to return the total using a nested for-each loop
 	 * 
