@@ -85,6 +85,18 @@ public class Picture extends SimplePicture {
 
 	}
 
+	public void runChallenge(){
+		Pixel[][] pixels = this.getPixels2D();
+		for(Pixel[] rowArray : pixels){
+			for (Pixel pixelObj : rowArray){
+				if(pixelObj.getGreen()> pixelObj.getBlue()){
+					pixelObj.setRed(0);
+					pixelObj.setBlue(0);
+					pixelObj.setGreen(0);
+				}
+			}
+		}
+	}
 	/** Method to set the blue to 0 */
 	public void zeroBlue() {
 		Pixel[][] pixels = this.getPixels2D();
@@ -95,6 +107,44 @@ public class Picture extends SimplePicture {
 		}
 	}
 
+	public void zeroRed(){
+		Pixel[][] pixels = this.getPixels2D();
+		for(Pixel[] rowArray : pixels){
+			for (Pixel pixelObj : rowArray){
+				pixelObj.setRed(0);
+			}
+		}
+	}
+
+	public void zeroGreen(){
+		Pixel[][] pixels = this.getPixels2D();
+		for(Pixel[] rowArray : pixels){
+			for (Pixel pixelObj : rowArray){
+				pixelObj.setGreen(0);
+			}
+		}
+	}
+	public void negate(){
+		Pixel[][] pixels = this.getPixels2D();
+		for(Pixel[] rowArray : pixels){
+			for (Pixel pixelObj : rowArray){
+				pixelObj.setGreen(255 - pixelObj.getGreen());
+				pixelObj.setBlue(255 - pixelObj.getBlue());
+				pixelObj.setRed(255 - pixelObj.getRed());
+			}
+		}
+	}
+	public void greyscale(){
+		Pixel[][] pixels = this.getPixels2D();
+		for (Pixel[] rowArray : pixels){
+			for(Pixel pixelObj : rowArray){
+				int avg = (pixelObj.getGreen()+ pixelObj.getBlue()+ pixelObj.getRed())/3;
+				pixelObj.setGreen(avg);
+				pixelObj.setRed(avg);
+				pixelObj.setBlue(avg);
+			}
+		}
+	}
 	/**
 	 * Method that mirrors the picture around a vertical mirror in the center of
 	 * the picture from left to right

@@ -8,6 +8,27 @@
  */
 public class PictureTester
 {
+  public static void runPicture(){
+    Picture water = new Picture("water.jpg");
+    water.explore();
+    water.runChallenge();
+    water.explore();
+  }
+  //Method to test keepOnlyBlue
+  public static void testKeepOnlyBlue(){
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.zeroRed();
+    beach.zeroGreen();
+    beach.explore();
+  }
+  //Method For negate
+  public static void testNegate(){
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.negate();
+    beach.explore();
+  }
   /** Method to test zeroBlue */
   public static void testZeroBlue()
   {
@@ -16,7 +37,11 @@ public class PictureTester
     beach.zeroBlue();
     beach.explore();
   }
-  
+  public static void testGrayscale(){
+    Picture beach = new Picture("beach.jpg");
+    beach.greyscale();
+    beach.explore();
+  }
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -58,12 +83,13 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
-    //testKeepOnlyBlue();
+    // testZeroBlue();
+    // testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
-    //testNegate();
-    //testGrayscale();
+    // testNegate();
+    runPicture();
+    // testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
     //testMirrorTemple();
@@ -74,7 +100,7 @@ public class PictureTester
     //testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
-    //testChromakey();
+    // testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
     //testSetRedToHalfValueInTopHalf();
