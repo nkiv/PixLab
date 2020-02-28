@@ -26,6 +26,12 @@ public class PictureTester
     redMotorcycle.mirrorHorizontalBotToTop();
     redMotorcycle.explore();
   }
+  public static void testMirrorDiagonal(){
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.mirrorDiagonal();
+    beach.explore();
+  }
   public static void runPicture(){
     Picture water = new Picture("water.jpg");
     water.explore();
