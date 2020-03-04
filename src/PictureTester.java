@@ -82,6 +82,7 @@ public class PictureTester
     temple.explore();
     temple.mirrorTemple();
     temple.explore();
+    
   }
   
   /** Method to test the collage method */
@@ -104,6 +105,7 @@ public class PictureTester
     * method in Java */
   public static void main(String[] args)
   {
+    System.out.println("Count:" + getCount());
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
@@ -112,11 +114,11 @@ public class PictureTester
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     // testNegate();
-    runPicture();
+    // runPicture();
     // testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
-    //testMirrorTemple();
+    testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
